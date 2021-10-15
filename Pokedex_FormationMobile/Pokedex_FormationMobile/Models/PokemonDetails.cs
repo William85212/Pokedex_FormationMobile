@@ -10,6 +10,6 @@ namespace Pokedex_FormationMobile.Models
 
         public Sprites Sprites { get; set; }
 
-        public string Weight { get; set; }
+        public int Weight { get; set; }
     }
 }

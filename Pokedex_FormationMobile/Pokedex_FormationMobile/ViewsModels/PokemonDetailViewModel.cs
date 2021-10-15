@@ -26,12 +26,12 @@ namespace Pokedex_FormationMobile.ViewsModels
             set { SetValue(ref _sprites, value); }
         }
 
-        private string _text;
+        private int _text;
 
-        public string Weight
+        public int Weight
         {
             get { return _text; }
-            set { _text = value; }
+            set { SetValue(ref _text, value); }
         }
 
 

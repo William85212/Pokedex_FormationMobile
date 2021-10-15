@@ -37,10 +37,11 @@
                     </Grid.ColumnDefinitions>
                     <Label Text="Pokemon Name :" Grid.Row="0" Grid.Column="0" FontSize="Large"/>
                     <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="1" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Fill"/>
-                    <Button Text="Fermer" Command="{Binding CloseCommand}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Yellow"/>
-                    <Label Text="Pokemon Name :" Grid.Row="0" Grid.Column="0" FontSize="Large"/>
+                    <Button Text="Fermer" Command="{Binding CloseCommand}" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Yellow"/>
+                    <Label Text="Pokemon Poids :" Grid.Row="1" Grid.Column="0" FontSize="Large"/>
+                    <Label Text="{Binding Weight}"  Grid.Row="1" Grid.Column="1" FontSize="Large"/>
                 </Grid>
-                <Label Text="{Binding Weight}"/>
+                
 
             </StackLayout>
         </ScrollView>
