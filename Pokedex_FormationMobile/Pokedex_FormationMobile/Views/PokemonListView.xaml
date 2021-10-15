@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pokedex_FormationMobile.Views.PokemonListView"
+             xmlns:extension="clr-namespace:Pokedex_FormationMobile.Tools">
+    <ContentPage.Content>
+        <StackLayout>
+            <Image Source="{extension:EmbeddedImage Ressourse=Pokedex_FormationMobile.Images.pokedex.png}"/>
+            <ListView ItemsSource="{Binding Liste}"
+                      SelectedItem="{Binding SelectedPokemon}"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding Name}" FontSize="Title"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Text="Prévious" Command="{Binding PreviousCommand}"/>
+                <Button Grid.Row="0" Grid.Column="1" Text="Next" Command="{Binding NextCommand}"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

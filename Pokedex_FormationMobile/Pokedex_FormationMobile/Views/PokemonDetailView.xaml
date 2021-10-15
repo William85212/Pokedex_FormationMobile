@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pokedex_FormationMobile.Views.Page1">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Image BindingContext="{Binding Sprites}" Source="{Binding Front_default}"/>
+                <Image Source=""/>
+
+                <Grid BindingContext="{Binding Sprites}"
+                      VerticalOptions="CenterAndExpand">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Image Grid.Column="0"
+                           Source="{Binding Front_Default}"
+                           Aspect="AspectFill"
+                           HeightRequest="150"/>
+
+                    <Image Grid.Column="1"
+                           Source="{Binding Back_Default}"
+                           Aspect="AspectFill"
+                           HeightRequest="150"/>
+                </Grid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Pokemon Name :" Grid.Row="0" Grid.Column="0" FontSize="Large"/>
+                    <Label Text="{Binding Name}" Grid.Row="0" Grid.Column="1" FontSize="Large" HorizontalOptions="Center" VerticalOptions="Fill"/>
+                    <Button Text="Fermer" Command="{Binding CloseCommand}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Yellow"/>
+                    <Label Text="Pokemon Name :" Grid.Row="0" Grid.Column="0" FontSize="Large"/>
+                </Grid>
+                <Label Text="{Binding Weight}"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
